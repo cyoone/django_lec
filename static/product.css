@@ -1,0 +1,76 @@
+/* 네비게이션 */
+.navbar-brand {
+    font-size: 40px;
+
+}
+
+ .navbar-nav .nav-link {
+    font-size: 25px;
+    margin-right: 50px;
+}
+
+/* 카드 */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0px 10px 0px 10px;
+
+    .product-item {
+        flex: 0 0 calc(25% - 20px); /* 한 줄에 4개의 상품을 표시 (가로 크기의 25%) */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+    }
+
+    .product-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .product-name {
+        margin-top: 10px;
+    }
+
+    .product-detail {
+        font-size: 14px;
+    }
+}
+
+/* 푸터 */
+.footer{
+    background-color: #D3D3D3;
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    .sub-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-subtitle {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .phone {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .footer-company {
+        margin-top: 10px;
+        text-align: center;
+        line-height: 10px;
+    }
+}
+
+/* 기타 */
+hr {
+    width: 100%;
+    background-color: black;
+}
