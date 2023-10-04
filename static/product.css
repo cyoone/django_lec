@@ -1,13 +1,28 @@
 /* 네비게이션 */
 .navbar-brand {
     font-size: 40px;
-
 }
 
  .navbar-nav .nav-link {
     font-size: 25px;
     margin-right: 50px;
 }
+
+.nav.nav-tabs .nav-item .nav-link {
+        color: black;
+        margin: 20px 0px 0px 0px;
+    }
+
+.nav.nav-tabs .nav-item .nav-link:hover {
+    color: gray; /* 호버 시 글자 색상 변경 */
+    background-color: transparent; /* 호버 시 배경색을 투명하게 유지 */
+}
+
+.tab-content {
+    margin-bottom: 60px;
+}
+
+
 
 /* 카드 */
 .product-container {
@@ -38,7 +53,7 @@
     }
 
     .product-detail {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
@@ -74,3 +89,5 @@ hr {
     width: 100%;
     background-color: black;
 }
+
+

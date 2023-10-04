@@ -1,0 +1,53 @@
+/* 네비게이션 */
+.navbar-brand {
+    font-size: 40px;
+
+}
+
+ .navbar-nav .nav-link {
+    font-size: 25px;
+    margin-right: 50px;
+}
+
+/* 공지사항 게시글 */
+.container {
+
+}
+
+.notice {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.post-title {
+    color: black;
+    cursor: pointer;
+}
+
+/* 푸터 */
+.footer{
+    margin-top: 60px;
+    background-color: #D3D3D3;
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    .sub-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-subtitle {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .phone {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .footer-company {
+        margin-top: 10px;
+        text-align: center;
+        line-height: 10px;
+    }
+}
