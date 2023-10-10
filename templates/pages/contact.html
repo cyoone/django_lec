@@ -36,7 +36,7 @@
                     {% for post in post_list %}
                         <tr>
                             <th scope="row">{{ forloop.revcounter }}</th>
-                            <td><a class="post-title" href="">{{ post.title }}</a></td>
+                            <td><a class="post-title" href="{% url 'notice' post.id %}">{{ post.title }}</a></td>
                             <td>{{ post.pub_date }}</td>
                         </tr>
                     {% empty %}

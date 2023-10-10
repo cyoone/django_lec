@@ -64,7 +64,7 @@
                     <div class="product-container">
                         {% for good in good_list %}
                         {% if good.category == "토너/미스트" %}
-                        <a class="product-item">
+                        <a href="{% url 'detail' good.id %}" class="product-item">
                             <img src="{{ good.image.url }}"/>
                             <div>
                                 <h5 class="product-name">{{ good.name }}</h5>
@@ -79,7 +79,7 @@
                     <div class="product-container">
                         {% for good in good_list %}
                         {% if good.category == "에센스/앰플" %}
-                        <a class="product-item">
+                        <a href="{% url 'detail' good.id %}" class="product-item">
                             <img src="{{ good.image.url }}"/>
                             <div>
                                 <h5 class="product-name">{{ good.name }}</h5>
@@ -94,7 +94,7 @@
                     <div class="product-container">
                         {% for good in good_list %}
                         {% if good.category == "로션/크림" %}
-                        <a class="product-item">
+                        <a href="{% url 'detail' good.id %}" class="product-item">
                             <img src="{{ good.image.url }}"/>
                             <div>
                                 <h5 class="product-name">{{ good.name }}</h5>
@@ -109,7 +109,7 @@
                     <div class="product-container">
                         {% for good in good_list %}
                         {% if good.category == "클렌징/스크럼" %}
-                        <a class="product-item">
+                        <a href="{% url 'detail' good.id %}" class="product-item">
                             <img src="{{ good.image.url }}"/>
                             <div>
                                 <h5 class="product-name">{{ good.name }}</h5>
@@ -124,7 +124,7 @@
                     <div class="product-container">
                         {% for good in good_list %}
                         {% if good.category == "선케어/팩" %}
-                        <a class="product-item">
+                        <a href="{% url 'detail' good.id %}" class="product-item">
                             <img src="{{ good.image.url }}"/>
                             <div>
                                 <h5 class="product-name">{{ good.name }}</h5>

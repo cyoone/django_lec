@@ -24,5 +24,10 @@ def contact(request):
     post_list = Post.objects.order_by('-pub_date')
     return render(request, 'pages/contact.html', {'post_list':post_list})
 
+def notice(request, post_id):
+    post_list = get_object_or_404(Post, pk=post_id)
+    context = {'post_list': post_list}
+    return render(request, 'pages/notice_detail.html', context)
+
 def company(request):
     return render(request, 'pages/company_info.html')
