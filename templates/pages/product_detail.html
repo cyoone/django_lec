@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>메인 페이지</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'product.css' %}">
+        <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    </head>
+    <body>
+
+       <!-- 본문 -->
+        <div class="container px-4 px-lg-5">
+
+            <br>
+            <img src="{{ good_list.image.url }}"/>
+            <div>
+                <h5 class="product-name">{{ good_list.name }}</h5>
+                <p class="product-detail">{{ good_list.price }}원</p>
+            </div>
+
+
+        </div>
+
+    </body>
+</html>
+
+
+
+{% endblock %}

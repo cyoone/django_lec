@@ -1,21 +1,6 @@
-<!--
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>메인 페이지</title>
-</head>
-<body>
-<nav>
-    <a href="/company/">company info</a>
-    <a href="/mysite/">product</a>
-</nav>
-
-<h1>메인 페이지입니다.</h1>
-</body>
-</html>
--->
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
 <html lang="ko">
     <head>
@@ -38,20 +23,6 @@
         </style>
     </head>
     <body>
-        <!-- 네비게이션바 -->
-        <nav class="navbar navbar-expand-lg"> <!-- navbar-dark bg-dark-->
-            <div class="container px-5 py-3">
-                <a class="navbar-brand" href="#!">YOONHADA</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="/about/">BRAND</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/product/">PRODUCT</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/contact/">CONTACT</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
         <!-- 페이지 내용 -->
         <div class="container px-4 px-lg-5">
@@ -104,30 +75,11 @@
         </div>
         <br><br><br>
 
-        <!-- Footer-->
-        <footer class="footer py-5 ">
-            <div class="container px-4 px-lg-5">
-                <div class="footer-container">
-                    <div class="sub-container">
-                      <p class="footer-subtitle">C/S</p>
-                      <p class="phone">010-1234-5678</p>
-                      <p>AM 10:00 - PM 05:00 (주말 및 공휴일 휴무)</p>
-                    </div>
-                    <div class="sub-container">
-                      <p class="footer-subtitle">COMPANY</p>
-                      <div class="footer-company">
-                          <p>상호: 윤하다 &nbsp;&nbsp; 대표: 박채윤</p>
-                          <p>사업자등록번호: 809-81-01574</p>
-                          <p>이메일: yoonhada@gmail.com</p>
-                          <address>주소: 서울특별시 용산구 한강대로 372</address>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+
     </body>
 </html>
 
+<!-- 슬라이드쇼 -->
 <script type="text/javascript">
     let emblaNode = document.querySelector(".slide");
     let options = { loop: true };
@@ -175,3 +127,4 @@
     // 3초마다 autoScroll 함수를 호출하여 자동 스크롤을 시작합니다.
     setInterval(autoScroll, 3000); // 3초(3000밀리초)마다 실행
   </script>
+{% endblock %}
