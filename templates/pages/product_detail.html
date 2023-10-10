@@ -14,23 +14,24 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'product.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'product_detail.css' %}">
         <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
     </head>
     <body>
 
-       <!-- 본문 -->
-        <div class="container px-4 px-lg-5">
-
-            <br>
-            <img src="{{ good_list.image.url }}"/>
-            <div>
-                <h5 class="product-name">{{ good_list.name }}</h5>
+    <!-- 본문 -->
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ good_list.image.url }}" class="img-fluid" alt="{{ good_list.img }}" />
+            </div>
+            <div class="product-info col-md-6">
+                <h3 class="product-name">{{ good_list.name }}</h3>
                 <p class="product-detail">{{ good_list.price }}원</p>
             </div>
-
-
         </div>
+    </div>
+
 
     </body>
 </html>

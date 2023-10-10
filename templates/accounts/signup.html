@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 가입</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'signup.css' %}">
+</head>
+<body>
+    <div class="form-container">
+<!--        <h1>회원 가입</h1>-->
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="button">
+                <button type="submit">가입</button>
+            </div>
+            <p class="move-login">이미 계정이 있으신가요? <a href="{% url 'accounts:login' %}" class="login-button">로그인</a></p>
+        </form>
+
+    </div>
+</body>
+</html>
+{% endblock %}

@@ -14,23 +14,30 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'contact.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'notice_detail.css' %}">
         <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
     </head>
     <body>
 
        <!-- 본문 -->
-        <div class="container px-4 px-lg-5">
-
+        <div class="container px-4 px-lg-5 mt-5">
+            <h3 class="notice">NOTICE</h3>
             <br>
-            <div>
-                <h5 class="post-title">{{ post_list.title }}</h5>
+            <div class="notice-detail">
+                <div class="header-container">
+                    <h5 class="post-title">{{ post_list.title }}</h5>
+                    <h5 class="post-pubdate">{{ post_list.pub_date }}</h5>
+                </div>
                 <p class="post-content">{{ post_list.content }}</p>
-                <p class="post-pubdate">{{ post_list.pub_date }}</p>
+
             </div>
 
 
         </div>
+
+
+
+
 
     </body>
 </html>

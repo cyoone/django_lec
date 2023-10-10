@@ -33,6 +33,11 @@
                   <li class="nav-item"><a class="nav-link" href="/about/">BRAND</a></li>
                   <li class="nav-item"><a class="nav-link" href="/product/">PRODUCT</a></li>
                   <li class="nav-item"><a class="nav-link" href="/contact/">CONTACT</a></li>
+                  {% if user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'accounts:logout' %}">{{ user.username }} (logout)</a></li>
+                  {% else %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'accounts:login' %}">LOGIN</a></li>
+                  {% endif %}
               </ul>
           </div>
       </div>
