@@ -43,14 +43,16 @@
             <p>NEW</p>
             <hr>
             <div class="product-container">
-                {% for new in new_list %}
-                <a class="product-item">
-                    <img src="{{ new.image.url }}"/>
+                {% for good in good_list %}
+                {% if good.name == "에어리 무기자차 선크림 50ml" or good.name == "자작나무70 수분 부스팅 크림 50ml" or good.name == "어성초77 클리어패드 (70매+10매 추가증정)" or good.name == "자작나무 70 수분 부스팅 세럼 30ml" %}
+                <a href="{% url 'detail' good.id %}" class="product-item">
+                    <img src="{{ good.image.url }}"/>
                     <div>
-                        <h5 class="product-name">{{ new.name }}</h5>
-                        <p class="product-detail">{{ new.price }}원</p>
+                        <h5 class="product-name">{{ good.name }}</h5>
+                        <p class="product-detail">{{ good.price }}원</p>
                     </div>
                 </a>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
@@ -61,14 +63,16 @@
             <p>BEST</p>
             <hr>
             <div class="product-container">
-                {% for best in best_list %}
-                <a class="product-item">
-                    <img src="{{ best.image.url }}"/>
+                {% for good in good_list %}
+                {% if good.name == "어성초 77 토너 500ml" or good.name == "어성초 70 데일리 로션 200ml" or good.name == "어성초 70 수딩 크림 50ml" or good.name == "어성초 80 수분 진정 앰플 30ml" %}
+                <a href="{% url 'detail' good.id %}" class="product-item">
+                    <img src="{{ good.image.url }}"/>
                     <div>
-                        <h5 class="product-name">{{ best.name }}</h5>
-                        <p class="product-detail">{{ best.price }}원</p>
+                        <h5 class="product-name">{{ good.name }}</h5>
+                        <p class="product-detail">{{ good.price }}원</p>
                     </div>
                 </a>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>

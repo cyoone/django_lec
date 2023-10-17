@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>댓글 수정 페이지</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'comment_form.css' %}">
+</head>
+<body>
+
+    <!-- 본문 -->
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{  comment.content_list.image.url }}" class="img-fluid" alt="{{ comment.content_list.img }}" />
+            </div>
+            <div class="product-info col-md-6">
+                <h3 class="product-name">{{ comment.content_list.name }}</h3>
+                <p class="product-detail">{{ comment.content_list.price }}원</p>
+            </div>
+        </div>
+<!--    <h2> update comment</h2>-->
+    <section class="mb-5">
+        <div class="card bg-light">
+            <div class="card-body">
+                <form method="post" class="mb-4" action="{% url 'comment_update' comment.id %}">
+                    {% csrf_token %}
+                    <textarea id="content" name="content" class="form-control" rows="3">{{ form.content.value }}</textarea>
+                    <div class="text-right" style="margin: 10px 0px;">
+                        <button type="submit" class="btn btn-primary">등록</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    </div>
+    {% endblock %}
+</body>
+</html>
