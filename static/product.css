@@ -1,13 +1,4 @@
 /* 네비게이션 */
-.navbar-brand {
-    font-size: 40px;
-}
-
- .navbar-nav .nav-link {
-    font-size: 25px;
-    margin-right: 50px;
-}
-
 .nav.nav-tabs .nav-item .nav-link {
         color: black;
         margin: 20px 0px 0px 0px;
@@ -21,8 +12,6 @@
 .tab-content {
     margin-bottom: 60px;
 }
-
-
 
 /* 카드 */
 .product-container {
@@ -54,33 +43,6 @@
 
     .product-detail {
         font-size: 15px;
-    }
-}
-
-/* 푸터 */
-.footer{
-    background-color: #D3D3D3;
-    .footer-container {
-        display: flex;
-        justify-content: space-around;
-    }
-    .sub-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer-subtitle {
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .phone {
-        font-size: 26px;
-        font-weight: bold;
-    }
-    .footer-company {
-        margin-top: 10px;
-        text-align: center;
-        line-height: 10px;
     }
 }
 

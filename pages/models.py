@@ -19,18 +19,6 @@ class Post(models.Model):
     content = models.TextField()
     pub_date = models.DateTimeField('date published')
 
-class New(models.Model):
-    name = models.TextField()
-    price = models.IntegerField()
-    category = models.CharField(null=True, max_length=200)
-    image = models.ImageField(upload_to='static/new_img/', blank=False)
-
-class Best(models.Model):
-    name = models.TextField()
-    price = models.IntegerField()
-    category = models.CharField(null=True, max_length=200)
-    image = models.ImageField(upload_to='static/best_img/', blank=False)
-
 class Comment(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     content_list = models.ForeignKey(Good, on_delete=models.CASCADE)

@@ -16,14 +16,8 @@
         <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'mainpage.css' %}">
         <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
-        <style>
-
-
-
-        </style>
     </head>
     <body>
-
         <!-- 페이지 내용 -->
         <div class="container px-4 px-lg-5">
 
@@ -36,50 +30,48 @@
               </div>
             </div>
             <div class="pagination"></div>
-        <div class="new-product">
 
             <!--신상품-->
-            <br><br>
-            <p>NEW</p>
-            <hr>
-            <div class="product-container">
-                {% for good in good_list %}
-                {% if good.name == "에어리 무기자차 선크림 50ml" or good.name == "자작나무70 수분 부스팅 크림 50ml" or good.name == "어성초77 클리어패드 (70매+10매 추가증정)" or good.name == "자작나무 70 수분 부스팅 세럼 30ml" %}
-                <a href="{% url 'detail' good.id %}" class="product-item">
-                    <img src="{{ good.image.url }}"/>
-                    <div>
-                        <h5 class="product-name">{{ good.name }}</h5>
-                        <p class="product-detail">{{ good.price }}원</p>
-                    </div>
-                </a>
-                {% endif %}
-                {% endfor %}
+            <div class="new-product">
+                <br><br>
+                <p>NEW</p>
+                <hr>
+                <div class="product-container">
+                    {% for good in good_list %}
+                    {% if good.name == "에어리 무기자차 선크림 50ml" or good.name == "자작나무70 수분 부스팅 크림 50ml" or good.name == "어성초77 클리어패드 (70매+10매 추가증정)" or good.name == "자작나무 70 수분 부스팅 세럼 30ml" %}
+                    <a href="{% url 'detail' good.id %}" class="product-item">
+                        <img src="{{ good.image.url }}"/>
+                        <div>
+                            <h5 class="product-name">{{ good.name }}</h5>
+                            <p class="product-detail">{{ good.price }}원</p>
+                        </div>
+                    </a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
             </div>
-        </div>
 
-        <div class="best-product">
             <!-- 인기상품 -->
-            <br><br>
-            <p>BEST</p>
-            <hr>
-            <div class="product-container">
-                {% for good in good_list %}
-                {% if good.name == "어성초 77 토너 500ml" or good.name == "어성초 70 데일리 로션 200ml" or good.name == "어성초 70 수딩 크림 50ml" or good.name == "어성초 80 수분 진정 앰플 30ml" %}
-                <a href="{% url 'detail' good.id %}" class="product-item">
-                    <img src="{{ good.image.url }}"/>
-                    <div>
-                        <h5 class="product-name">{{ good.name }}</h5>
-                        <p class="product-detail">{{ good.price }}원</p>
-                    </div>
-                </a>
-                {% endif %}
-                {% endfor %}
+            <div class="best-product">
+                <br><br>
+                <p>BEST</p>
+                <hr>
+                <div class="product-container">
+                    {% for good in good_list %}
+                    {% if good.name == "어성초 77 토너 500ml" or good.name == "어성초 70 데일리 로션 200ml" or good.name == "어성초 70 수딩 크림 50ml" or good.name == "어성초 80 수분 진정 앰플 30ml" %}
+                    <a href="{% url 'detail' good.id %}" class="product-item">
+                        <img src="{{ good.image.url }}"/>
+                        <div>
+                            <h5 class="product-name">{{ good.name }}</h5>
+                            <p class="product-detail">{{ good.price }}원</p>
+                        </div>
+                    </a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
             </div>
-        </div>
-        </div>
-        <br><br><br>
 
-
+        </div><br><br><br>
     </body>
 </html>
 

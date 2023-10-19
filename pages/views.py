@@ -1,16 +1,14 @@
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth.decorators import login_required
-from .models import Slides, Good, Post, New, Best, Comment
+from .models import Slides, Good, Post, Comment
 from .forms import CommentForm
 
 
 def mainpage(request):
     slides_list = Slides.objects.all()
     good_list = Good.objects.all()
-    new_list = New.objects.all()
-    best_list = Best.objects.all()
-    context = {'slides_list':slides_list, 'good_list':good_list, 'new_list':new_list, 'best_list':best_list}
+    context = {'slides_list':slides_list, 'good_list':good_list}
     return render(request, 'pages/mainpage.html', context)
 
 def about(request):
@@ -18,7 +16,8 @@ def about(request):
 
 def product(request):
     good_list = Good.objects.all()
-    return render(request, 'pages/product.html', {'good_list':good_list})
+    context = {'good_list':good_list}
+    return render(request, 'pages/product.html', context)
 
 def detail(request, good_id):
     good_list = get_object_or_404(Good, pk=good_id)
@@ -75,12 +74,10 @@ def comment_delete(request, comment_id):
 
 def contact(request):
     post_list = Post.objects.order_by('-pub_date')
-    return render(request, 'pages/contact.html', {'post_list':post_list})
+    context = {'post_list':post_list}
+    return render(request, 'pages/contact.html', context)
 
 def notice(request, post_id):
     post_list = get_object_or_404(Post, pk=post_id)
     context = {'post_list': post_list}
     return render(request, 'pages/notice_detail.html', context)
-
-def company(request):
-    return render(request, 'pages/company_info.html')

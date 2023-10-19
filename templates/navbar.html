@@ -2,24 +2,22 @@
 {% load static %}
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>NavBar</title>
-
+    <meta charset="UTF-8">
+    <title>NavBar</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'mainpage.css' %}">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <style>
+    .navbar {
+        .navbar-brand {
+            font-size: 40px;
 
-
-  <style>
-    .navbar-brand {
-        font-size: 40px;
-
-    }
-     .navbar-nav .nav-link {
-        font-size: 25px;
-        margin-right: 50px;
+        }
+         .navbar-nav .nav-link {
+            font-size: 25px;
+            margin-right: 50px;
+        }
     }
   </style>
 </head>

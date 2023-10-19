@@ -18,42 +18,35 @@
         <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
     </head>
     <body>
-        <!-- 페이지 내용 -->
-        <div class="container mt-5">
-            <h3 class="notice">NOTICE</h3>
+    <!-- 페이지 내용 -->
+    <div class="container mt-5">
+        <h3 class="notice">NOTICE</h3>
 
-            <!-- 게시글 목록을 나타낼 테이블 -->
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">번호</th>
-                        <th scope="col">제목</th>
-                        <th scope="col">작성일</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for post in post_list %}
-                        <tr>
-                            <th scope="row">{{ forloop.revcounter }}</th>
-                            <td><a class="post-title" href="{% url 'notice' post.id %}">{{ post.title }}</a></td>
-                            <td>{{ post.pub_date }}</td>
-                        </tr>
-                    {% empty %}
-                        <tr>
-                            <td colspan="4">게시글이 없습니다.</td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-            <br>
+        <!-- 게시글 목록을 나타낼 테이블 -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">작성일</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in post_list %}
+                <tr>
+                    <th scope="row">{{ forloop.revcounter }}</th>
+                    <td><a class="post-title" href="{% url 'notice' post.id %}">{{ post.title }}</a></td>
+                    <td>{{ post.pub_date }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">게시글이 없습니다.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
     </div>
-
-
     </body>
 </html>
 {% endblock %}
-<!-- 부트스트랩 JS 및 jQuery, Popper.js 링크 -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-

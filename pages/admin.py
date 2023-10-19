@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Slides, Good, Post, New, Best, Comment
-# 관리자 페이지에서 조작
+from .models import Slides, Good, Post, Comment
 
+# 관리자 페이지에서 조작
 class SlidesAdmin(admin.ModelAdmin):
     list_display = ['title', 'image']
     search_fields = ['title']
@@ -22,5 +22,3 @@ admin.site.register(Slides, SlidesAdmin)
 admin.site.register(Good, GoodAdmin)
 admin.site.register(Comment, CommentAdmin)
 admin.site.register(Post, PostAdmin)
-admin.site.register(New)
-admin.site.register(Best)
