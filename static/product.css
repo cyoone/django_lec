@@ -18,7 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px 150px 10px;
 
     .product-item {
         flex: 0 0 calc(25% - 20px); /* 한 줄에 4개의 상품을 표시 (가로 크기의 25%) */
